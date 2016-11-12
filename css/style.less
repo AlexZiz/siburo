@@ -16,7 +16,7 @@ a:visited,
 a:active {
 	text-decoration: none;
 }
-.section_header h2 {
+.section_header h3 {
 	text-transform: uppercase;
 	font-family: 'PT Sans Caption', sans-serif;
 	color: #666666;
@@ -244,46 +244,128 @@ section#wireless_network {
 	}	
 }
 /*===============  Wi-Fi решения ========================*/
-section#wireless_network {
-	.section_header h2 span {
-		color: #00a0df;
-	}
-	.card {
-		border: 2px solid #ebeaea;   
-		&:hover {
-			border: 2px solid #00a0df;
-		}
-	}
-	button.more_btn {
-		border: 2px solid #00a0df;
-		background: #00a0df;
-		&:hover {
-			background: #0185b9;
-		}
-	}
-	button.order_btn {
-		border: 2px solid #00a0df;
-		&:hover {
-			background: #b8dbf3;
-		}
-	}
-}
+// section#wireless_network {
+// 	.section_header h2 span {
+// 		color: #00a0df;
+// 	}
+// 	.card {
+// 		border: 2px solid #ebeaea;   
+// 		&:hover {
+// 			border: 2px solid #00a0df;
+// 		}
+// 	}
+// 	button.more_btn {
+// 		border: 2px solid #00a0df;
+// 		background: #00a0df;
+// 		&:hover {
+// 			background: #0185b9;
+// 		}
+// 	}
+// 	button.order_btn {
+// 		border: 2px solid #00a0df;
+// 		&:hover {
+// 			background: #b8dbf3;
+// 		}
+// 	}
+// }
 
 /*=======================    Услуги    ========================*/
 section#services {
-	padding-top: 30px;
-	margin-bottom: 30px;
-	.slider {
-		margin: 40px 0px 40px 70px;
-		.slide_xl {
-			content: '';
-			width: 30px;
-			height: 40px;
-			background-image: url(..img)
+	.section_header {
+		padding-bottom: 30px;
+	}
+	.wrap_slider {
+		margin-bottom: 40px;
+		.carousel-indicators {
+			bottom: -40px;
+		}
+		.carousel-indicators .active {
+			background: #f2bd68;
+		}
+		.carousel-indicators li {
+			border: 2px solid #f2bd68;
+		}
+		.carousel-control.right,
+		.carousel-control.left {
+			background-image: none;
 		}
 	}
+	.item {
+			padding: 5px 5px 5px 25px;
+			border: 1px solid #f2f2f2;
+			border-width: 1px 0px 1px 0px;
+			// background: #f8f8f8;
+			color: #eaa744;
+			p {
+				font-size: 16px;
+				color: #666666;
+				&:before {
+					content: " ";
+					display: inline-block;
+					width: 32px;
+					height: 32px;
+					background: url(../img/slider_icon/pointer.png) no-repeat center center;
+					opacity: 0.5;
+				}
+			}
+		}
 }
-/*============    ШРИФТЫ    ===========*/
+/*=======================    Подвал    ==========================*/
+footer#contacts {
+	margin-top: 50px;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	background: #666666;
+	color: #ffffff;
+	vertical-align: middle;
+	.map_cont {
+		margin-bottom: 30px;
+	}
+	.cont_info {
+		font-size: 18px;
+		margin-left: 22px;
+	}
+	p.cont_address {
+		&:before {
+			content: " ";
+			display: inline-block;
+			margin: 5px 5px 0px -26px;
+			width: 20px;
+			height: 20px;
+			background: url(../img/cont_location.png) no-repeat center center;
+		}
+	}
+	p.cont_phone {
+		&:before {
+			content: " ";
+			display: inline-block;
+			margin: 5px 5px 0px -26px;
+			width: 20px;
+			height: 20px;
+			background: url(../img/cont_phone.png) no-repeat center center;
+		}
+	}
+	p.cont_email {
+		&:before {
+			content: " ";
+			display: inline-block;
+			margin: 5px 5px 0px -26px;
+			width: 20px;
+			height: 20px;
+			background: url(../img/cont_email.png) no-repeat center center;
+		}
+	}
+	.cont_requisites {
+		display: block;
+		font-size: 16px;
+	}
+	.cont_kazan {
+		font-size: 16px;
+	}
+	.developer {
+		font-size: 16px;
+	}
+}
 
 /*============    ШРИФТЫ    ===========*/
 
