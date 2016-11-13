@@ -47,10 +47,10 @@
             <a href="#">
               <li>Главная</li>
             </a>
-            <a href="#">
+            <a href="#station">
               <li>Станции</li>
             </a>
-            <a href="#">
+            <a href="#services">
               <li>Подключение</li>
             </a>
             <a href="#">
@@ -59,7 +59,7 @@
             <a href="#">
               <li>О нас</li>
             </a>
-            <a href="#">
+            <a href="#contacts">
               <li>Контакты</li>
             </a>
           </ul>
@@ -67,16 +67,40 @@
       </div>
     </nav>
     <!--Фон главной страницы-->
-    <section class="container main_bac">
-      <div class="row main_text col-md-12">
-        <span>Проектирование и монтаж WiFi сетей на оборудовании ubiquiti</span><br><br>
-        <span>Обследование, установка и программирование АТС</span><br><br>
-        <span>Подключение к интернету на <a href="#">объектах....</a></span>
-      </div>
-      <div class="row main_bottom col-md-10">
-        <div class="connect_bot bot1"><a href="#station">Выбрать станцию</a></div>
-        <div class="connect_bot bot2"><a href="#wireless_network">Выбрать Wi-Fi решение</a></div>
-        <div class="connect_bot bot3"><a href="#">Заказать выезд специалиста</a></div>
+    <section id="main_bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="main_text">
+              <span>Проектирование и монтаж WiFi сетей на оборудовании ubiquiti</span><br><br>
+              <span>Обследование, установка и программирование АТС</span><br><br>
+              <span>Подключение к интернету на <a href="#services">объектах....</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="main_bottom">
+              <div class="connect_bot bot1 text-left">
+                <a href="#station">Выбрать станцию</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="main_bottom">
+              <div class="connect_bot bot2 text-center">
+                <a href="#wireless_network">Выбрать Wi-Fi решение</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="main_bottom">
+              <div class="connect_bot bot3">
+                <a href="#">Заказать выезд специалиста</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!--Телефонные станции-->
