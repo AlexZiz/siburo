@@ -21,6 +21,9 @@ a:active {
 	font-family: 'PT Sans Caption', sans-serif;
 	color: #666666;
 }
+button:focus {
+	outline: none;
+}
 /*========================    Шапка    =======================*/
 header .container {
 	margin-top: 20px;
@@ -154,19 +157,19 @@ section#main_bg {
 			}
 		}
 		.bot3 button {
-			background: transparent;
 			display: block;
 			width: 300px;
 			padding: 13px;
-			text-align: center;
 			border: none;
+			border-radius: 0;
 			border: 2px solid #f2bd68;
+			background: transparent;
+			text-align: center;
 			font-weight: bold;
-			opacity: 0.9;
 			color: #fff;
 			text-decoration: none;
 			text-transform: uppercase;
-				&:hover {
+			&:hover {
 				background-color: rgba(255, 255, 255, 0.8);
 				color: #000;
 				-wevkit-transition: background-color .3s;
@@ -193,12 +196,12 @@ section#wireless_network {
 		color: #666666;
 		font-size: 12px;
 	}
-	button.more_btn {
+	button.more_btn  {
 		padding: 10px 21px;
 		margin-right: 2px;
+		background: #f2bd68;
 		border: none;
 		border: 2px solid #f2bd68;
-		background: #f2bd68;
 		text-transform: uppercase;
 		font-weight: bold;
 		color: #666666;
@@ -252,32 +255,6 @@ section#wireless_network {
 		}
 	}	
 }
-/*===============  Wi-Fi решения ========================*/
-// section#wireless_network {
-// 	.section_header h2 span {
-// 		color: #00a0df;
-// 	}
-// 	.card {
-// 		border: 2px solid #ebeaea;   
-// 		&:hover {
-// 			border: 2px solid #00a0df;
-// 		}
-// 	}
-// 	button.more_btn {
-// 		border: 2px solid #00a0df;
-// 		background: #00a0df;
-// 		&:hover {
-// 			background: #0185b9;
-// 		}
-// 	}
-// 	button.order_btn {
-// 		border: 2px solid #00a0df;
-// 		&:hover {
-// 			background: #b8dbf3;
-// 		}
-// 	}
-// }
-
 /*=======================    Услуги    ========================*/
 section#services {
 	.section_header {
@@ -379,11 +356,72 @@ footer#contacts {
 .modal-dialog {
 	margin-top: 10%;
 }
-.header_modal {
-
+.modal-content {
+	border-radius: 0;
+	input[name="name"] {
+		margin-top: 15px;
+		padding: 25px;
+		padding-left: 30px;
+		border-radius: 0;
+		border: 1px solid #cccccc;
+		background: url(../img/modal/name.png) no-repeat center left 5px;
+		opacity: 0.5;
+		&:focus {
+			opacity: 1;
+		}
+	}
+	input[name="phone"] {
+		margin-top: 15px;
+		padding: 25px;
+		padding-left: 30px;
+		border-radius: 0;
+		border: 1px solid #cccccc;
+		background: url(../img/modal/phone.png) no-repeat center left 5px;
+		opacity: 0.5;
+		&:focus {
+			opacity: 1;
+		}
+	}
+	button[type="submit"] {
+		width: 100%;
+		margin-top: 15px;
+		padding: 14px 35px;
+		border: 1px solid #f2bd68;
+		background: #f2bd68;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #ffffff;
+		&:hover {
+			background: #ecb152;
+		}
+	}
 }
-
-
+.header_modal {
+	h4{
+		text-transform: uppercase;
+		color: #666666;
+		font-weight: bold;
+	}
+}
+.modal-header {
+	margin-top: -45px;
+	border-bottom: none;
+	.close {
+		margin-right: -30px;
+		text-shadow: none;
+		font-size: 24px;
+		color: #fff;
+		opacity: 0.9;
+	}
+}
+.header_modal_info {
+	h4 {
+		margin-left: 30px;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #666666;
+	}
+}
 /*============    	АДАПТИВ    ===========*/
 
 @media(min-width:0px) and (max-width:320px) {
