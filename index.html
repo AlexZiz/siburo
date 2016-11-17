@@ -23,11 +23,11 @@
   </head>
   <body>
   <!--Шапка главной страницы-->
-    <header>
+    <header id="hed">
       <div class="container">
         <div class="row">
           <div class="col-sm-3">
-            <img src="img/logo_2.png" alt="Логотип СИБ" class=" logotype img-responsive">
+            <img src="img/logo_2.png" alt="Логотип СИБ" class="logotype img-responsive">
           </div>
           <div class="col-sm-6 text-center descript">
             <h4>Обслуживание телефонных станций<br><span>предоставление доступа в интернет</span></h4>
@@ -40,7 +40,7 @@
       </div>
     </header>
     <!--Меню главной страницы-->
-    <nav>
+    <nav id="top_nav">
       <div class="container">
         <div class="row">
           <ul class="list-inline">
@@ -50,11 +50,11 @@
             <a href="#station">
               <li>Станции</li>
             </a>
+            <a href="#wireless_network">
+              <li>WI-Fi решения</li>
+            </a>
             <a href="#services">
               <li>Подключение</li>
-            </a>
-            <a href="#">
-              <li>Обслуживание</li>
             </a>
             <a href="#">
               <li>О нас</li>
@@ -118,7 +118,7 @@
               <h4>Для малого бизнеса</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".ats_for_small_bisnes">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
           <div class="col-md-3">
@@ -127,7 +127,7 @@
               <h4>Для среднего бизнеса</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".ats_for_average_bisnes">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
           <div class="col-md-3">
@@ -136,7 +136,7 @@
               <h4>Для крупного бизнеса</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".ats_for_high_bisnes">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
           <div class="col-md-3">
@@ -145,7 +145,7 @@
               <h4>Телефонные аппараты</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".phones">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@
               <h4>Точки доступа</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".wifi_dot">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
           <div class="col-md-3">
@@ -175,7 +175,7 @@
               <h4>Активное оборудование</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".active_equipment">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
           <div class="col-md-3">
@@ -184,7 +184,7 @@
               <h4>Компактные контроллеры</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".controllers">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
           <div class="col-md-3">
@@ -193,7 +193,7 @@
               <h4>Направленные антены</h4>
               <br>
               <button class="more_btn" data-toggle="modal" data-target=".antenna">подробнее</button>
-              <button class="order_btn" data-toggle="modal" href="#">заказать</button>
+              <button class="order_btn" data-toggle="modal" data-target=".bs-example-modal-sm">заказать</button>
             </div>
           </div>
         </div>
@@ -746,6 +746,50 @@
               $("html").niceScroll({cursorcolor:"#000"});
           }
       );
+    </script>
+    <!-- Скрипт закрепления меню при прокрутке -->
+    <script>
+      var h_hght = 110; // высота шапки
+      var h_mrg = 0;    // отступ когда шапка уже не видна
+                       
+      $(function(){
+       
+          var elem = $('#top_nav');
+          var top = $(this).scrollTop();
+           
+          if(top > h_hght){
+              elem.css('top', h_mrg);
+          }           
+           
+          $(window).scroll(function(){
+              top = $(this).scrollTop();
+               
+              if (top+h_mrg < h_hght) {
+                  elem.css('top', (h_hght-top));
+              } else {
+                  elem.css('top', h_mrg);
+              }
+          });
+       
+      });
+    </script>
+    <!-- Плавный скролл при нажатии на якорную ссылку -->
+    <script>
+      $(document).ready(function(){
+        $("#top_nav, .main_text, .bot1, .bot2").on("click","a", function (event) {
+          //отменяем стандартную обработку нажатия по ссылке
+          event.preventDefault();
+
+          //забираем идентификатор бока с атрибута href
+          var id  = $(this).attr('href'),
+
+          //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+          
+          //анимируем переход на расстояние - top за 1500 мс
+          $('body,html').animate({scrollTop: top}, 500);
+        });
+      });
     </script>
     <!-- Fotorama -->
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->

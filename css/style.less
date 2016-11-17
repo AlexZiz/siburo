@@ -25,14 +25,16 @@ button:focus {
 	outline: none;
 }
 /*========================    Шапка    =======================*/
-header .container {
-	margin-top: 20px;
-	color: #666;
+header {
+	height: 110px; 
 	.logotype {
+		padding-top: 20px;
 		margin-left: -10px;
 		margin-top: 10px;
+		color: #666;
 	}
 	.descript {
+		padding-top: 20px;
 		text-transform: uppercase;
 		font-family: 'PT Sans Caption', sans-serif;
 		font-size: 14px;
@@ -41,7 +43,7 @@ header .container {
 		}
 	}
 	.telefon_header {
-		margin-top: -15px;
+		margin-top: 10px;
 		padding-left: 70px;
 		a {
 			color: #666;
@@ -63,9 +65,11 @@ header .container {
 }
 /*========================    Меню главной страницы    =======================*/
 nav {
-	background: #fafdfa;
-}
-nav .container{
+	top: 110px; /*высота шапки в пикселях*/
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	background: #ededed;
 	ul.list-inline a {
 		display: inline-block;
 		padding: 15px 10px;
@@ -82,12 +86,13 @@ nav .container{
 			text-decoration: none;
 			background: #f2bd68;
 			color: #fff;
+			}
 		}
-	}
 	ul.list-inline {
 		margin-bottom: 0px;
 	}
 }
+
 /*=========================    Фон главной станицы    ========================*/
 section#main_bg {
 	background: url(../img/main_bac.jpg) no-repeat center center;
