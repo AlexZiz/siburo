@@ -21,10 +21,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-    <dir id="toTop">наверх</dir> <!-- Кнопка НАВЕРХ -->
+    <dir id="toTop" class="hidden-xs">наверх</dir> <!-- Кнопка НАВЕРХ -->
   <body>
   <!--Шапка главной страницы-->
-    <header id="hed">
+    <header id="hed" class="hidden-xs" >
       <div class="container">
         <div class="row">
           <div class="col-sm-3">
@@ -41,7 +41,7 @@
       </div>
     </header>
     <!--Меню главной страницы-->
-    <nav id="top_nav">
+    <nav class="hidden-xs" id="top_nav">
       <div class="container">
         <div class="row">
           <ul class="list-inline">
@@ -67,35 +67,68 @@
         </div>
       </div>
     </nav>
+    <!--Меню главной страницы - адаптив -->
+    <nav id="top_nav" class="visible-xs">
+      <div class="container">
+        <div class="col-xs-3">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Главная</a>
+            </li>
+            <li>
+              <a href="#station">Станции</a>
+            </li>
+            <li>
+              <a href="#wireless_network">WI-Fi решения</a>
+            </li>
+            <li>
+              <a href="#services">Подключение</a>
+            </li>
+            <li>
+              <a href="#">О нас</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-xs-offset-3">
+          <img src="img/logo_2.png" alt="Логотип СИБ" class="logotype img-responsive pull-right">
+        </div>
+      </div>
+    </nav>
     <!--Фон главной страницы-->
     <section id="main_bg">
       <div class="container">
-        <div class="row">
+        <div class="row wow fadeInUp">
           <div class="col-md-12">
             <div class="main_text">
-              <span>Проектирование и монтаж WiFi сетей на оборудовании ubiquiti</span><br><br>
-              <span>Обследование, установка и программирование АТС</span><br><br>
-              <span>Подключение к интернету на <a href="#services">объектах....</a></span>
+              <p><span>Проектирование и монтаж WiFi сетей на оборудовании ubiquiti</span></p>
+              <p><span>Обследование, установка и программирование АТС</span></p>
+              <p><span>Подключение к интернету на <a href="#services">объектах....</a></span></p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="main_bottom">
+            <div class="main_bottom wow fadeInUp" data-wow-delay="0.4s">
               <div class="connect_bot bot1 text-left">
                 <a href="#station">Выбрать станцию</a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="main_bottom">
+            <div class="main_bottom wow fadeInUp" data-wow-delay="0.6s">
               <div class="connect_bot bot2 text-center">
                 <a href="#wireless_network">Выбрать Wi-Fi решение</a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="main_bottom">
+            <div class="main_bottom wow fadeInUp" data-wow-delay="0.8s">
               <div class="connect_bot bot3">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">заказать вызов специалиста</button>
               </div>
@@ -231,13 +264,19 @@
                 <div class="active item">
                   <div class="row">
                     <div class="col-md-5">
-                      <img src="img/object/1.jpg" width="480" height="400" alt="XL">
+                      <div class="item_block block_name"><h3>XL</h3></div>              
                     </div>
                     <div class="col-md-7">
-                      <h3>XL</h3>
-                      <p>Ямашева 97</p>
-                      <div class="map_object">
-                       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ldfpShS3lVZMd40tQ2PN-upnNzbq1hP9&amp;width=600&amp;height=290&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                      <div class="item_block block_address"><p>Ямашева 97</p></div> 
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <img src="img/object/1.jpg" class="img-responsive" alt="XL">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="map_object" style="max-width: 600px; max-height: 380px">
+                       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ldfpShS3lVZMd40tQ2PN-upnNzbq1hP9&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                       </div>
                     </div>
                   </div>
@@ -248,12 +287,16 @@
                     <div class="col-md-5">
                       <img src="img/object/2.jpg" width="480" height="400" alt="XL">
                     </div>
-                    <div class="col-md-7">
-                      <h3>Suvar Plaza</h3>
-                      <p>Спартаковская 6</p>
-                      <div class="map_object">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0-QC4XCwU8pxo8d0BTqfbXBLwU2M15i0&amp;width=630&amp;height=290&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                    <div class="col-md-7">  
+                      <div class="map_object" style="max-width: 600px; max-height: 290px">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0-QC4XCwU8pxo8d0BTqfbXBLwU2M15i0&amp;width=100%&amp;height=280px&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="item_block"><h3>Suvar Plaza</h3></div>
+                      <div class="item_block block_item_2"><p>Спартаковская 6</p></div>        
                     </div>
                   </div>
                 </div>
@@ -263,12 +306,16 @@
                     <div class="col-md-5">
                       <img src="img/object/3.jpg" width="480" height="400" alt="XL">
                     </div>
-                    <div class="col-md-7">
-                      <h3>Сити Центр</h3>
-                      <p>Академика Парина 3</p>
-                      <div class="map_object">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=sgtABBH8TsxIFPYHhOQUT5I90Xd_jccG&amp;width=630&amp;height=290&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                    <div class="col-md-7"> 
+                      <div class="map_object" style="max-width: 600px; max-height: 290px">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=sgtABBH8TsxIFPYHhOQUT5I90Xd_jccG&amp;width=100%&amp;height=280px&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="item_block"><h3>Сити Центр</h3></div>
+                      <div class="item_block block_item_2"><p>Академика Парина 3</p></div>        
                     </div>
                   </div>
                 </div>
@@ -279,11 +326,15 @@
                       <img src="img/object/4.jpg" width="480" height="400" alt="XL">
                     </div>
                     <div class="col-md-7">
-                      <h3>Колходный рынок</h3>
-                      <p>Мартына Межлаука 13</p>
-                      <div class="map_object">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Byjn5UVjOnLwzKCCZFrip0stGz90fB6c&amp;width=630&amp;height=290&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                      <div class="map_object" style="max-width: 600px; max-height: 290px">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Byjn5UVjOnLwzKCCZFrip0stGz90fB6c&amp;width=100%&amp;height=280px&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 list-inline">
+                      <div class="item_block"><h3>Колходный рынок</h3></div>
+                      <div class="item_block block_item_2"><p>Мартына Межлаука 13</p></div>   
                     </div>
                   </div>
                 </div>
@@ -294,11 +345,15 @@
                       <img src="img/object/5.jpg" width="480" height="400" alt="XL">
                     </div>
                     <div class="col-md-7">
-                      <h3>Отель Ривьера</h3>
-                      <p>Проспект Фатыха Амирхана 1А</p>
-                      <div class="map_object">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=gyswwaFwr2fryoWX7fO063N-lxHDPFtr&amp;width=630&amp;height=290&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                      <div class="map_object" style="max-width: 600px; max-height: 290px">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=gyswwaFwr2fryoWX7fO063N-lxHDPFtr&amp;width=100%&amp;height=280px&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 list-inline">
+                      <div class="item_block"><h3>Отель Ривьера</h3></div>
+                      <div class="item_block block_item_2"><p>Проспект Фатыха Амирхана 1А</p></div>
                     </div>
                   </div>
                 </div>
@@ -309,11 +364,15 @@
                       <img src="img/object/6.jpg" width="480" height="400" alt="XL">
                     </div>
                     <div class="col-md-7">
-                      <h3>РК Ривьера</h3>
-                      <p>Проспект Фатыха Амирхана 1Б</p>
-                      <div class="map_object">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=X6F0V6IpTBQFM3mddhFdKrR-vpk8k9v7&amp;width=630&amp;height=290&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                      <div class="map_object" style="max-width: 600px; max-height: 290px">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=X6F0V6IpTBQFM3mddhFdKrR-vpk8k9v7&amp;width=100%&amp;height=280px&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 list-inline">
+                      <div class="item_block"><h3>РК Ривьера</h3></div>
+                      <div class="item_block block_item_2"><p>Проспект Фатыха Амирхана 1Б</p></div>
                     </div>
                   </div>
                 </div>
@@ -324,11 +383,15 @@
                       <img src="img/object/7.jpg" width="480" height="400" alt="XL">
                     </div>
                     <div class="col-md-7">
-                      <h3>Интертерминал</h3>
-                      <p>Набережная 1</p>
-                      <div class="map_object">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JGJ_6ALxmnb5rh3EvXUI--R65qdPhhDT&amp;width=630&amp;height=290&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                      <div class="map_object" style="max-width: 600px; max-height: 290px">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JGJ_6ALxmnb5rh3EvXUI--R65qdPhhDT&amp;width=100%&amp;height=280px&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 list-inline">
+                      <div class="item_block"><h3>Интертерминал</h3></div>
+                      <div class="item_block block_item_2"><p>Набережная 1</p></div>               
                     </div>
                   </div>
                 </div>
@@ -804,5 +867,7 @@
     <!-- Fotorama -->
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.css">
   </body>
 </html>
