@@ -1,5 +1,6 @@
-/*============    	АДАПТИВ    ===========*/
+/*===========================    	АДАПТИВ    ===========================*/
 
+/*===========================  Общий стиль для меню  ===========================*/
 .dropdown-toggle {
 	margin-left: -10px;
 	padding: 10px 15px;
@@ -19,8 +20,7 @@
 @media(min-width:0px) and (max-width:320px) {
 	/*==================== Общий стиль заголовков =========================*/
 	.section_header {
-		margin-bottom: 20px;
-		margin-top: 20px;
+		margin: 10px 20px 10px 20px;
 	}
 		 h3 {
 		font-size: 16px;
@@ -64,12 +64,21 @@
 		}
 	}
 	/*==================== Станции и Wi-Fi  =========================*/
-	section#station {
+	section#station,
+	section#wireless_network  {
+		padding-top: 10px;
+		margin-bottom: 0;
 		.card {
 			margin-bottom: 10px;
+			button.more_btn,
+			button.order_btn {
+				display: block;
+				margin-bottom: 5px;
+				width: 100%;
+			}
 		}
 	}
-	/*==================== Подключения  =========================*/
+	/*======================== Подключения  =========================*/
 	section#services {
 		.wrap_slider {
 			.item {
@@ -84,32 +93,217 @@
 				.map_object {
 					width: 100%;
 					margin-bottom: 10px;
-					// padding-left: 5px;
-					// padding-right: 5px;
 				}	
+			}
+		}
+	}
+	/*======================== Подвал  =========================*/
+	footer#contacts {
+		margin-top: 20px;
+		padding-top: 30px;
+		text-align: center;
+		h2 {
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.developer {
+			margin-top: 20px;
+			font-size: 14px;
+			text-align: center;
+		}
+		.cont_info {
+			margin-bottom: 10px;
+			margin-left: 0;
+			font-size: 14px;
+			
+		}
+	}
+	/*==================== Всплывающие окна  =========================*/
+	.modal-content {
+		.modal-header{
+			margin-top: -40px;
+		.close {
+			margin-right: -15px;
+			}
+		}
+		.modal-body {
+			text-align: center;
+			.header_modal_info {
+				h4 {
+					margin-left: 0;
+				}
 			}
 		}
 	}
 }
 
-/*==================== Всплывающие окна  =========================*/
-.modal-header{
-	margin-top: -40px;
-	.close {
-		margin-right: -15px;
+@media(min-width:321px) and (max-width:480px) {
+	/*==================== Общий стиль заголовков =========================*/
+	.section_header {
+		margin: 10px 20px 10px 20px;
+	}
+		 h3 {
+		font-size: 18px;
+	}
+	/*==================== главное меню  =========================*/
+	nav {
+		top: 0px;
+		height: 60px;
+		img {
+			margin-top: 18px;
+		}
+	}
+	/*==================== Главный фон  =========================*/
+	section#main_bg {
+		.main_text {
+			text-align: center;
+			p {
+				margin-top: 0;
+				margin-bottom: 0;
+				span {
+					margin-bottom: 0px;
+					line-height: 250%;
+					font-size: 16px;
+				}
+			} 
+		}
+		.main_bottom {
+			margin-top: 20px;
+			margin-bottom: 10px;
+			.connect_bot {
+				display: block;
+				margin-right: 0;
+				a {
+					width: 100%;
+				}
+			}
+			.bot3 button {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	/*==================== Станции и Wi-Fi  =========================*/
+	section#station,
+	section#wireless_network  {
+		padding-top: 10px;
+		margin-bottom: 0;
+		.card {
+			margin-bottom: 10px;
+			button.more_btn,
+			button.order_btn {
+				display: block;
+				margin-bottom: 5px;
+				width: 100%;
+			}
+		}
+	}
+	/*======================== Подключения  =========================*/
+	section#services {
+		.wrap_slider {
+			.item {
+				padding-left: 10px;
+				padding-right: 10px;
+				img {
+				width: 100%;
+				height: 100%;
+				margin-bottom: 10px;
+				margin-left: 0;
+				}
+				.map_object {
+					width: 100%;
+					margin-bottom: 10px;
+				}	
+			}
+		}
+	}
+	/*======================== Подвал  =========================*/
+	footer#contacts {
+		margin-top: 20px;
+		padding-top: 30px;
+		text-align: center;
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.developer {
+			margin-top: 20px;
+			font-size: 16px;
+			text-align: center;
+		}
+		.cont_info {
+			margin-bottom: 10px;
+			margin-left: 0;
+			font-size: 14px;
+			
+		}
+	}
+	/*==================== Всплывающие окна  =========================*/
+	.modal-content {
+		.modal-header{
+			margin-top: -40px;
+		.close {
+			margin-right: -15px;
+			}
+		}
+		.modal-body {
+			text-align: center;
+			.header_modal_info {
+				h4 {
+					margin-left: 0;
+				}
+			}
+		}
 	}
 }
 
-@media(min-width:321px) and (max-width:480px) {
-	
-}
-
 @media(min-width:481px) and (max-width:768px) {
-	
+	/*==================== главное меню  =========================*/
+	nav {
+		top: 0px;
+		height: 60px;
+		img {
+			margin-top: 18px;
+		}
+	}
 }
 
-@media(min-width:769px) and (max-width:992px) {
-	
+@media(min-width:768px) and (max-width:992px) {
+	/*========================== Шапка  =============================*/
+	header#hed {
+		.logo_sx {
+			width: 25%;
+		}
+		.descript {
+			width: 40%;
+			font-size: 12px;
+			text-align: center;
+		}
+		.telefon_header {
+			width: 35%;
+			text-align: center;
+			a {
+				font-size: 15px;
+			}
+		}
+	}
+	/*==================== Главное меню  ===========================*/
+	nav#top_nav {
+		padding-left: 30px;
+	}
+	/*==================== Главное фон  ===========================*/
+	section#main_bg {
+		.main_bottom {
+			margin-top: 20px;
+			margin-bottom: 10px;
+			.connect_bot {
+				margin-right: 0;
+			}
+			.bot3 button {
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 
 @media(min-width:993px) and (max-width:1200px) {
