@@ -16,7 +16,6 @@
 		font-size: 18px;
 	}
 }
-
 @media(min-width:0px) and (max-width:320px) {
 	/*==================== Общий стиль заголовков =========================*/
 	.section_header {
@@ -136,7 +135,6 @@
 		}
 	}
 }
-
 @media(min-width:321px) and (max-width:480px) {
 	/*==================== Общий стиль заголовков =========================*/
 	.section_header {
@@ -256,7 +254,6 @@
 		}
 	}
 }
-
 @media(min-width:481px) and (max-width:768px) {
 	/*==================== главное меню  =========================*/
 	nav {
@@ -267,7 +264,6 @@
 		}
 	}
 }
-
 @media(min-width:768px) and (max-width:992px) {
 	/*========================== Шапка  =============================*/
 	header#hed {
@@ -298,14 +294,72 @@
 			margin-bottom: 10px;
 			.connect_bot {
 				margin-right: 0;
+				a {
+					width: 230px;
+				}
 			}
 			.bot3 button {
+				width: 100%;
 				margin-bottom: 20px;
 			}
 		}
 	}
+	/*==================== Станции и Wi-Fi  =========================*/
+	section#station,
+	section#wireless_network  {
+		padding-top: 10px;
+		margin-bottom: 0;
+		.card {
+			margin-bottom: 10px;
+			button.more_btn,
+			button.order_btn {
+				display: block;
+				margin-bottom: 5px;
+				width: 100%;
+			}
+		}
+	}
+	/*======================== Подключения  =========================*/
+	section#services {
+		.wrap_slider {
+			.item {
+				padding-left: 10px;
+				padding-right: 10px;
+				img {
+				width: 100%;
+				height: 100%;
+				margin-bottom: 10px;
+				margin-left: 0;
+				}
+				.map_object {
+					width: 100%;
+					height: 175px;
+					margin-bottom: 10px;
+				}	
+			}
+		}
+	}
+	/*======================== Подвал  =========================*/
+	footer#contacts {
+		margin-top: 20px;
+		padding-top: 30px;
+		text-align: center;
+		h2 {
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.developer {
+			margin-top: 20px;
+			font-size: 14px;
+			text-align: center;
+		}
+		.cont_info {
+			margin-bottom: 10px;
+			margin-left: 0;
+			font-size: 14px;
+			
+		}
+	}
 }
-
 @media(min-width:993px) and (max-width:1200px) {
-	
 }
